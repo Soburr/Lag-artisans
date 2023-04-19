@@ -54,6 +54,12 @@
                     <input type="text" name="roomNumber" placeholder="Room Number" required autofocus>
                 </div><br>
 
+                {{-- WHAT DO YOU DO? --}}
+                <div class="field">
+                    <span class="fa fa-user"></span>
+                    <input type="text" name="artisan" placeholder="What is Your Specialty" required autofocus>
+                </div><br>
+
                 {{-- EMAIL FIELD --}}
                 <div class="field">
                     <span class="fa fa-user"></span>

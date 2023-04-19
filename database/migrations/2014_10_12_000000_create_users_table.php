@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('number')->unique();
             $table->string('hallOfResidence');
             $table->string('roomNumber');
+            $table->string('artisan');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

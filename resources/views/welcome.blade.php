@@ -60,7 +60,7 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Reviews</a></li>
+          <li><a class="nav-link scrollto " href="#testimonials">Testimonals</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -78,7 +78,7 @@
             to connect with other students in other to offer their services </b></p>
 
       <div>
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        <a href="homepage" class="btn-get-started scrollto">Get Started</a>
         {{-- <a href="#portfolio" class="btn-projects scrollto">Our Projects</a> --}}
       </div><br>
 
@@ -119,6 +119,7 @@
             <ul>
               <li><i class="bi bi-check-circle"></i> Effective Artisans with respectible reputations.</li>
               <li><i class="bi bi-check-circle"></i> Artisans are around You, Just Call up</li>
+              <li><i class="bi bi-check-circle"></i> You get to negotiate the price you are to pay</li>
               <li><i class="bi bi-check-circle"></i> No online transactions, i.e., the sole aim of the app is to connect Artisans with their customers.</li>
             </ul>
 
