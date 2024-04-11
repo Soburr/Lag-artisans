@@ -33,12 +33,13 @@
                 <h5 class="font-weight-light mb-4 font-bold"
                     style="color: blue; font-family: monaco; font-size: 32px; text-align:center;"> CONNECT WITH AN
                     ARTISAN TODAY.! </h5>
+
                 <div class="bg-white p-5 rounded shadow">
-                    <form>
+                    <form method="GET" action="{{ route('search') }}">
                         <div class="row">
                             <div class="form-group col-md-9">
-                                <input id="exampleFormControlInput6" type="text"
-                                    placeholder="Search For An Artisan..." class="form-control form-control-underlined">
+                                <input id="" type="text"
+                                    placeholder="Search For An Artisan..." class="form-control form-control-underlined" name="search">
                             </div>
                             <div class="form-group col-md-3">
                                 <button type="submit" class="custom-btn btn-1"> Search </button>
@@ -46,6 +47,7 @@
                         </div>
                     </form>
                 </div>
+
             </div>
         </div>
     </div>

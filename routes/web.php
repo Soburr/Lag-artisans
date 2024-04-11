@@ -35,6 +35,10 @@ Route::get('/homepage', function() {
 
 Route::get('/dashboard', 'App\Http\Controllers\PortalController@dashboard')->middleware(['auth'])->name('dashboard');
 
+Route::get('/dashboard', 'App\Http\Controllers\PortalController@index')->middleware(['auth'])->name('dashboard');
+
+Route::get('/search', 'App\Http\Controllers\SearchController@search')->middleware(['auth'])->name('search');
+
 Route::get('/logout', 'App\Http\Controllers\PortalController@logout');
 
 require __DIR__.'/auth.php';
