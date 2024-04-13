@@ -35,9 +35,9 @@ Route::get('/dashboard', 'App\Http\Controllers\PortalController@dashboard')->mid
 
 Route::get('/dashboard', 'App\Http\Controllers\PortalController@index')->middleware(['auth'])->name('dashboard');
 
-Route::get('/search', 'App\Http\Controllers\HomepageController@search');
+Route::get('/homepage', 'App\Http\Controllers\HomepageController@search');
 
-Route::get('/homepage', 'App\Http\Controllers\HomepageController@index');
+// Route::get('/homepage', 'App\Http\Controllers\HomepageController@index');
 
 Route::get('/logout', 'App\Http\Controllers\PortalController@logout');
 

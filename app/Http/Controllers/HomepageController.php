@@ -7,9 +7,9 @@ use App\Models\User;
 
 class HomepageController extends Controller
 {
-    public function index () {
-        return view('user.homepage');
-    }
+    // public function index () {
+    //     return view('user.homepage');
+    // }
     public function search (Request $request) {
 
        $query = $request->input('query');
