@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PortalController;
+use App\Http\Controllers\HomepageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,15 +30,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/homepage', function() {
-    return view('homepage');
-});
 
 Route::get('/dashboard', 'App\Http\Controllers\PortalController@dashboard')->middleware(['auth'])->name('dashboard');
 
 Route::get('/dashboard', 'App\Http\Controllers\PortalController@index')->middleware(['auth'])->name('dashboard');
 
-Route::get('/search', 'App\Http\Controllers\SearchController@search')->middleware(['auth'])->name('search');
+Route::get('/search', 'App\Http\Controllers\HomepageController@search');
+
+Route::get('/homepage', 'App\Http\Controllers\HomepageController@index');
 
 Route::get('/logout', 'App\Http\Controllers\PortalController@logout');
 
