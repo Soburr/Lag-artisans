@@ -24,46 +24,48 @@
     </script>
     <link rel="stylesheet" href="{{ asset('assets/css/homepage.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    @vite('resources/css/app.css')
     <title>Unilag Artisans</title>
 </head>
 
 <body>
 
+    <div class="container">
     <div class="container mx-auto px-4 py-4">
-        <form method="GET" action="{{ url('search') }}">
+        <form method="GET" action="{{ url('homepage') }}">
             @csrf
             <div class="flex items-center">
                 <input type="text" class="w-full px-4 py-2 border rounded-md mr-2" name="query"
-                    placeholder="Search for an artisan">
+                    placeholder="Search for an artisan" value="{{ $query ?? ''}}">
                 <button type="submit"
-                    class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Search</button>
+                    class="bg-blue-500 text-black px-4 py-2 rounded-md hover:bg-blue-600">Search</button>
             </div>
         </form>
     </div>
 
+    @if ($artisans->count() > 0)
+    <div class="min-w-full lg:w-3/4 xl:w-3/4 xl:w-2/3">
 
-    <div class="mt-4">
-        @if ($artisans->count() > 0)
-        <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
-            <thead class="bg-gray-800 text-white">
+        <table class="min-w-full bg-white shadow-md border-collapse border border-gray-300">
+            <thead>
                 <tr>
-                    <th class="py-2 px-4">Name</th>
-                    <th class="py-2 px-4">Speciality</th>
-                    <th class="py-2 px-4">Hall Of Residence</th>
+                    <th class="border border-gray-300 py-2 px-4">Name</th>
+                    <th class="border border-gray-300 py-2 px-4">Speciality</th>
+                    <th class="border border-gray-300 py-2 px-4">Hall Of Residence</th>
                 </tr>
             </thead>
-            <tbody class="text-gray-700">
+            <tbody>
                 @foreach ($artisans as $artisan)
                     <tr>
-                            <td class="py-2 px-4">
-                                <a href="{{ url('/')}}" class="block text-black hover:text-blue-500 px-4 py-2"> {{ $artisan->name }} </a>
+                            <td class="border bg-gray-50 border-gray-300 py-2 px-4">
+                                <a href="{{ url('/')}}" class="block text-black hover:text-black-500 px-4 py-2"> {{ $artisan->name }} </a>
                             </td>
 
-                            <td class="py-2 px-4">
-                                <a href="{{ url('/')}}" class="block text-black hover:text-blue-500 px-4 py-2"> {{ $artisan->artisan }} </a>
+                            <td class="border border-gray-300 py-2 px-4">
+                                <a href="{{ url('/')}}" class="block text-black hover:text-black-500 px-4 py-2"> {{ $artisan->artisan }} </a>
                             </td>
 
-                            <td class="py-2 px-4">
+                            <td class="border border-gray-300 py-2 px-4">
                                 <a href="{{ url('/')}}" class="block text-black hover:text-blue-500 px-4 py-2"> {{ $artisan->hallOfResidence }} </a>
                             </td>
 
@@ -72,12 +74,12 @@
             </tbody>
         </table>
 
-        {{-- @if ($artisans->count() > 0) --}}
+
           @else
             <p class="py-2 px-4"> No Artisan Found </p>
           @endif
     </div>
-
+</div>
 
     <script src="app.js"></script>
 </body>
